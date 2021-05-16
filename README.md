@@ -76,7 +76,7 @@ client/src/services/config.js - Variable API_URI
 Here you have two demostrations of the app
 
 ### Login
-[![Login ](https://j.gifs.com/08RY3y.gif)]
+![Login ](https://j.gifs.com/08RY3y.gif)
 
 ### Home
-[![Demo ](https://j.gifs.com/pZY8Vp.gif)]
+![Demo ](https://j.gifs.com/pZY8Vp.gif)
