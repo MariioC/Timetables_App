@@ -2,7 +2,7 @@
     <div class="table-row" :class="{'taken' : taken, 'disabled' : !taken && turnsAvailable == 0}" @click="optionTurn">
         <div class="table-data">{{ hour.hour }}</div>
         <div class="table-data">{{ turnsAvailable }}</div>
-        <div class="table-data">Taken</div>
+        <div class="table-data">{{ status }}</div>
     </div>
 </template>
 
@@ -24,6 +24,16 @@ export default {
         taken() {
             const index = this.turns.findIndex(turn => turn.id_hour == this.hour.id_hour && turn.id_user == this.id_user);
             return index != -1 ? true : false;
+        },
+        status() {
+            let status = 'Available';
+            if(this.taken) {
+                status = 'Taken';
+            } else if(!this.taken && this.turnsAvailable == 0) {
+                status = 'Not available'
+            }
+
+            return status;
         }
     },
     methods: {
